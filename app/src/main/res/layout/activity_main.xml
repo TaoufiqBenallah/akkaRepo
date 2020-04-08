@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MainActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/colorPrimaryDark">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="180px"
+                android:padding="10dp"
+                android:orientation="horizontal"
+                android:background="@color/colorPrimary">
+                <TextView
+                    android:layout_width="350px"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="10px"
+                    android:layout_marginLeft="30px"
+                    android:textColor="#FFFFFF"
+                    android:textSize="28sp"
+                    android:layout_alignParentLeft="true"
+                    tools:text="AkkaBook"></TextView>
+
+                <ImageView
+                    android:layout_width="100px"
+                    android:layout_height="100px"
+                    android:layout_marginTop="10px"
+                    android:layout_marginRight="40px"
+                    android:id="@+id/profilImg"
+                    android:background="@color/colorPrimaryDark"></ImageView>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="0dp"
+                        android:background="@color/white"
+                        android:text="Liste des amis"
+                        android:visibility="visible" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130px"
+                android:orientation="horizontal"
+                android:background="@color/white">
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="0dp"
+                    android:background="@color/white"
+                    android:text="Suggestions"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp">
+                    <Button
+                        android:id="@+id/button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ajouter"
+                        android:layout_marginRight="40px"
+                        android:layout_marginTop="30px"
+
+                        />
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/bun"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="something"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10px"
+                        >
+                        <TextView
+                            android:layout_width="350px"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="45px"
+                            android:layout_marginLeft="0px"
+
+                            android:textSize="22sp"
+                            tools:text="AkkaBook"></TextView>
+                        <ImageView
+                            android:layout_width="100px"
+                            android:layout_height="100px"
+                            android:layout_marginTop="40px"
+                            android:layout_marginRight="40px"
+                            android:layout_marginLeft="40px"
+                            android:id="@+id/profgilImg"
+                            android:background="@color/colorPrimary"></ImageView>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
