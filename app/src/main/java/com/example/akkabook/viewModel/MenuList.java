@@ -4,6 +4,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.akkabook.dataModel.UserModel;
+import com.example.akkabook.di.DaggerUserConnectedApiComponent;
 import com.example.akkabook.services.UserConnectedService;
 
 import javax.inject.Inject;
@@ -16,7 +17,7 @@ import io.reactivex.schedulers.Schedulers;
 public class MenuList extends ViewModel {
 
     public MutableLiveData<UserModel> userConnected = new MutableLiveData<UserModel>();
-    MutableLiveData<Boolean> isOptionsDisplayed = new MutableLiveData<Boolean>();
+    public MutableLiveData<Boolean> isOptionsDisplayed = new MutableLiveData<Boolean>();
 
     @Inject
     public UserConnectedService userConnectedService;
@@ -27,6 +28,7 @@ public class MenuList extends ViewModel {
 
     public MenuList(){
         super();
+        DaggerUserConnectedApiComponent.create().inject(this);
     }
 
     public void getUserConnected(){

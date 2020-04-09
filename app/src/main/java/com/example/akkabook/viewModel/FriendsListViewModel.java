@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 import com.example.akkabook.dataModel.FriendModel;
+import com.example.akkabook.di.DaggerFriendsApiComponent;
 import com.example.akkabook.services.FriendsService;
 
 import java.util.List;
@@ -25,6 +26,7 @@ public class FriendsListViewModel extends ViewModel {
 
     public FriendsListViewModel(){
         super();
+        DaggerFriendsApiComponent.create().inject(this);
     }
     CompositeDisposable disposable = new CompositeDisposable();
 

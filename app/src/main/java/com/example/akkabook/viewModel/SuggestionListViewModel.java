@@ -3,6 +3,7 @@ package com.example.akkabook.viewModel;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 import com.example.akkabook.dataModel.SuggestionModel;
+import com.example.akkabook.di.DaggerSuggestionsApiComponent;
 import com.example.akkabook.services.SuggestionService;
 
 import java.util.List;
@@ -26,6 +27,7 @@ public class SuggestionListViewModel extends ViewModel {
 
     public SuggestionListViewModel(){
         super();
+        DaggerSuggestionsApiComponent.create().inject(this);
     }
 
     public void refresh(){
